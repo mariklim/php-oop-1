@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+display: flex;
+width: 80%;
+margin: auto;
+}
+
+ul{
+    list-style: none;
+}
+
+.card{
+    text-align: center;
+    padding: 1.25rem;
+    background-color: rgb(206, 211, 211);
+    width: 18.75rem;
+    height: 25rem;
+    margin: .625rem;
+}
+
+.new{
+    background-color: red;
+    color: white;
+}
