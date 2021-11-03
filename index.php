@@ -43,6 +43,7 @@ $you_3->setNew($you_3->year);
         <span class="new"><?php echo $you_1->new ?></span>
             </li>
         </ul>
+       <img src="<?php echo $you_1->poster ?>" alt="" >
         
 
         </div>
@@ -60,6 +61,7 @@ $you_3->setNew($you_3->year);
         <span class="new"> <?php echo $you_2->new ?></span>
             </li>
         </ul>
+        <img src="<?php echo $you_2->poster ?>" alt="" >
     
 
         </div>
@@ -78,6 +80,7 @@ $you_3->setNew($you_3->year);
         <span class="new"> <?php echo $you_3->new ?></span>
             </li>
         </ul>
+        <img src="<?php echo $you_3->poster ?>" alt="" >
        
 
         </div>
