@@ -2,13 +2,13 @@
 require_once __DIR__."/classes/movie.php";
 
 $you_1 = new Movie("You", "Thriller","1 stagione", "un", 2017, 'https://upload.wikimedia.org/wikipedia/en/c/c6/You_Season_1.jpg',"" );
-$you_1->setNew($you_1->year);
+$you_1->setNew($you_1->getYear());
 
 $you_2 = new Movie("You", "Thriller","2 stagione", "un", 2018, 'https://upload.wikimedia.org/wikipedia/en/b/bb/You_Season_2.jpg',"" );
-$you_2->setNew($you_2->year);
+$you_2->setNew(2018);
 
 $you_3 = new Movie("You", "Thriller","3 stagione", "un", 2021, 'https://upload.wikimedia.org/wikipedia/en/d/d8/Official_poster_for_You_%28season_3%29.png',"" );
-$you_3->setNew($you_3->year);
+$you_3->setNew(2021);
 
 // echo "<h2>Titolo: {$you->title}</h2>";
 // echo "<h3>Genere: {$you->genre}</h3>";
@@ -30,60 +30,24 @@ $you_3->setNew($you_3->year);
 <body>
     <div class="container">
         <div class="card">
-        <h2><?php echo $you_1->title ?></h2>
+        <h2><?php echo $you_1->getTitle() ?></h2>
         <ul>
             <li> Genere:
-        <?php echo $you_1->genre ?>
+        <?php echo $you_1->getGenre() ?>
             </li>
             <li> Stagione:
-        <?php echo $you_1->season ?>
+        <?php echo $you_1->getSeason() ?>
             </li>
             <li> Anno di uscita:
-        <?php echo $you_1->year ?>
-        <span class="new"><?php echo $you_1->new ?></span>
+        <?php echo $you_1->getYear() ?>
+        <span class="new"><?php echo $you_1->getNew() ?></span>
             </li>
         </ul>
-       <img src="<?php echo $you_1->poster ?>" alt="" >
+       <img src="<?php echo $you_1->getPoster() ?>" alt="" >
         
 
         </div>
-        <div class="card">
-        <h2><?php echo $you_2->title ?></h2>
-        <ul>
-            <li> Genere:
-        <?php echo $you_2->genre ?>
-            </li>
-            <li> Stagione:
-        <?php echo $you_2->season ?>
-            </li>
-            <li> Anno di uscita:
-        <?php echo $you_2->year ?>
-        <span class="new"> <?php echo $you_2->new ?></span>
-            </li>
-        </ul>
-        <img src="<?php echo $you_2->poster ?>" alt="" >
-    
-
-        </div>
-
-        <div class="card">
-        <h2><?php echo $you_3->title ?></h2>
-        <ul>
-            <li> Genere:
-        <?php echo $you_3->genre ?>
-            </li>
-            <li> Stagione:
-        <?php echo $you_3->season ?>
-            </li>
-            <li> Anno di uscita:
-        <?php echo $you_3->year ?>
-        <span class="new"> <?php echo $you_3->new ?></span>
-            </li>
-        </ul>
-        <img src="<?php echo $you_3->poster ?>" alt="" >
-       
-
-        </div>
+     
     </div>
 
 

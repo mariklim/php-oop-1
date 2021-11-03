@@ -1,14 +1,15 @@
 <?php
 class Movie
 {
-    public $title;
-    public $genre;
-    public $season;
-    public $year;
-    public $poster;
-    public $new = "";
+    private $title;
+    private $genre;
+    private $season;
+    private $year;
+    private $lang;
+    private $poster;
+    private $new = "";
 
-    function __construct($_title, $_genre,$_season, $_lang, $_year, $_poster, $_new)
+    public function __construct($_title, $_genre,$_season, $_lang, $_year, $_poster, $_new)
     {
         $this->title = $_title;
         $this->genre = $_genre;
@@ -18,14 +19,38 @@ class Movie
         $this->poster = $_poster;
         $this->new = $_new;
     }
-    public function setNew($_year)
+    public function getTitle()
     {
-        if ($_year >= 2021) {
+        return $this->title;
+    }
+    public function getGenre()
+    {
+        return $this->genre;
+    }
+    public function getSeason()
+    {
+        return $this->season;
+    }
+    public function getYear()
+    {
+        return $this->year;
+    }
+
+    public function setNew($_test)
+    {
+        if ($_test >= 2021) {
             $this->new = "Nuova uscita";
         }
+    }
+    public function getPoster()
+    {
+        return $this->poster;
     }
     public function getNew()
     {
         return $this->new;
     }
+
+
+    
 }
